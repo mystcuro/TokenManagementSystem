@@ -7,25 +7,19 @@
 	<title> Token Management App </title>
 	
 <link type="text/css" rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
 	<div id="wrapper">
 		<div id="header">
-			<h2>    Token Management  </h2>
+			<h2>    Admin Page  </h2>
 		</div>
 	</div>
 
 	<div id="container">
 	
 		<div id="content">
-		
-			<!-- put new button: Add Student -->
-			
-			<input type="button" value="Get Token" 
-				   onclick="window.location.href='add-customer-form.jsp'; return false;"
-				   class="add-customer-button"
-			/>
 			
 			<table>
 			
@@ -41,27 +35,19 @@
 						<td> ${tCustomer.cName} </td>
 					</tr>
 				
-				</c:forEach>
-				
+				</c:forEach>				
 			</table>
 		
 		</div>
 	
 	</div>
-	</form>
+	<form action="CustomerControllerServlet" method="GET" >
 	
-			<p>
-			<a href="CustomerControllerServlet">Update</a>
-		</p>
+	<input type="hidden" name="command" value="DELETE"/>
+	<input type="submit" value="Bring Next Customer On Top" class="save"/>
+	
+	</form>
 </body>
 
 
 </html>
-
-
-
-
-
-
-
-
